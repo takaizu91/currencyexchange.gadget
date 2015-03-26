@@ -1,7 +1,7 @@
 
 <?xml version="1.0" encoding="utf-8"?>
 <gadget>
-	<name>Currency_Gadget_Alpha0.2</name>
+	<name>Currency_Gadget_Alpha</name>
 	<version>1.0.0.0</version>
 	<author name="takaizu">
 		<info url="http://shinkucast.web.fc2.com" />
@@ -14,7 +14,7 @@
 	</icons>
 	<hosts>
 		<host name="sidebar">
-			<base type="HTML" apiVersion="1.0.0.0" src="test.htm" />
+			<base type="HTML" apiVersion="0.0.0.2" src="test.htm" />
 			<permissions>Full</permissions>
 			<platform minPlatformVersion="1.0"/>
 		</host>
