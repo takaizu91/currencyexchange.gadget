@@ -14,6 +14,6 @@ Just double click the file you downloaded and it will be install automatically t
 
 
 Method 2 - 
-If you decide to download from git, download from master fork and .zip them with whatever zip software you have (winZip, 7Zip, PeaZip etc.). Then, change the file extension .zip to .gadget.
+If you decide to pull from git, pull from master branch and .zip them with whatever zip software you have (winZip, 7Zip, PeaZip etc.). Then, change the file extension .zip to .gadget.
 
 * By default, most Windows version (Vista or later) hide known file extention. To enable it, click My Computer, then click 'Organize' tab -> 'Folder and Search Option'. Under 'Advanced Setting' in 'View' tab, unselect 'Hide extensions for known file types' and click 'OK'. This should enable you to see the .zip extension and properly rename it.
