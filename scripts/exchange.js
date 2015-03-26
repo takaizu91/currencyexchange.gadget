@@ -35,7 +35,7 @@ function doCalc() {
 		var cur = 3.0673;
 		var x = document.getElementById("value1").value;			
 		var y = x * (100 / cur);
-		var y2 = y.toFixed(2);
+		var y2 = y.toFixed(0);
 		document.getElementById("value2").value = y2;
 	}
 	
@@ -77,7 +77,7 @@ function doCalc() {
 		var cur = 119.499;
 		var x = document.getElementById("value1").value;			
 		var y = x * cur;
-		var y2 = y.toFixed(2);
+		var y2 = y.toFixed(0);
 		document.getElementById("value2").value = y2;
 	}
 	
@@ -120,7 +120,7 @@ function doCalc() {
 		var cur = 1;
 		var x = document.getElementById("value1").value;			
 		var y = x * (cur);
-		var y2 = y.toFixed(2);
+		var y2 = y.toFixed(0);
 		document.getElementById("value2").value = y2;
 	}
 	
@@ -163,7 +163,7 @@ function doCalc() {
 		var cur = 94.2563;
 		var x = document.getElementById("value1").value;			
 		var y = x * cur;
-		var y2 = y.toFixed(2);
+		var y2 = y.toFixed(0);
 		document.getElementById("value2").value = y2;
 	}
 	
@@ -206,7 +206,7 @@ function doCalc() {
 		var cur = 177.992;
 		var x = document.getElementById("value1").value;			
 		var y = x * cur;
-		var y2 = y.toFixed(2);
+		var y2 = y.toFixed(0);
 		document.getElementById("value2").value = y2;
 	}
 	
@@ -325,7 +325,7 @@ function doCalcRev() {
 		var cur = 32.3450;
 		var x2 = document.getElementById("value2").value;			
 		var y2 = x2 * cur;
-		var y3 = y2.toFixed(2);
+		var y3 = y2.toFixed(0);
 		document.getElementById("value1").value = y3;
 	}	
 
@@ -333,7 +333,7 @@ function doCalcRev() {
 		var cur = 118.908;
 		var x2 = document.getElementById("value2").value;			
 		var y2 = x2 * cur;
-		var y3 = y2.toFixed(2);
+		var y3 = y2.toFixed(0);
 		document.getElementById("value1").value = y3;
 	}	
 	
@@ -341,7 +341,7 @@ function doCalcRev() {
 		var cur = 1;
 		var x2 = document.getElementById("value2").value;			
 		var y2 = x2 * cur;
-		var y3 = y2.toFixed(2);
+		var y3 = y2.toFixed(0);
 		document.getElementById("value1").value = y3;
 	}	
 	
@@ -349,7 +349,7 @@ function doCalcRev() {
 		var cur = 92.9509;
 		var x2 = document.getElementById("value2").value;			
 		var y2 = x2 * cur;
-		var y3 = y2.toFixed(2);
+		var y3 = y2.toFixed(0);
 		document.getElementById("value1").value = y3;
 	}	
 	
@@ -357,7 +357,7 @@ function doCalcRev() {
 		var cur = 176.949;
 		var x2 = document.getElementById("value2").value;			
 		var y2 = x2 * cur;
-		var y3 = y2.toFixed(2);
+		var y3 = y2.toFixed(0);
 		document.getElementById("value1").value = y3;
 	}	
 	
