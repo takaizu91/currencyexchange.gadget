@@ -2,11 +2,12 @@
 // Based on MYR
 // Last update on 26/3/15 1700
 // Currently only testing out 5 main currencies
-//var USD = 3.6620;
-//var JPY = 3.0899;
-//var EUR = 4.0399;
-//var AUD = 2.8827;
-//var GBP = 5.4776;
+var def = 1; //default value if undetermined or same currency
+var USD = 3.6620;
+var JPY = 3.0899;
+var EUR = 4.0399;
+var AUD = 2.8827;
+var GBP = 5.4776;
 
 function doCalc() {
 	
@@ -16,41 +17,41 @@ function doCalc() {
 	// MYR to other currency
 	//--------------------------------------------------
 	if (ccc == "MYR" && ddd == "MYR") {		
-		var cur = 1;
+
 		var x = document.getElementById("value1").value;			
-		var y = x * (1 / cur);
+		var y = x * def;
 		var y2 = y.toFixed(2);
 		document.getElementById("value2").value = y2;
 	}
 	
 	if (ccc == "MYR" && ddd == "USD") {
-		var cur = 3.6670;
+		
 		var x = document.getElementById("value1").value;			
-		var y = x * (1 / cur);
+		var y = x * (1 / USD);
 		var y2 = y.toFixed(2);
 		document.getElementById("value2").value = y2;
 	}
 	
 	if (ccc == "MYR" && ddd == "JPY") {
-		var cur = 3.0673;
+		
 		var x = document.getElementById("value1").value;			
-		var y = x * (100 / cur);
+		var y = x * (100 / JPY);
 		var y2 = y.toFixed(0);
 		document.getElementById("value2").value = y2;
 	}
 	
 	if (ccc == "MYR" && ddd == "AUD") {
-		var cur = 2.8825;
+		
 		var x = document.getElementById("value1").value;			
-		var y = x * (1 / cur);
+		var y = x * (1 / AUD);
 		var y2 = y.toFixed(2);
 		document.getElementById("value2").value = y2;
 	}
 	
 	if (ccc == "MYR" && ddd == "GBP") {
-		var cur = 5.4851;
+		
 		var x = document.getElementById("value1").value;			
-		var y = x * (1 / cur);
+		var y = x * (1 / GBP);
 		var y2 = y.toFixed(2);
 		document.getElementById("value2").value = y2;
 	}
@@ -58,23 +59,23 @@ function doCalc() {
 	// USD to other currency
 	//---------------------------------------------------
 	if (ccc == "USD" && ddd == "MYR") {		
-		var cur = 3.6670;
+		
 		var x = document.getElementById("value1").value;			
-		var y = x * cur;
+		var y = x * USD;
 		var y2 = y.toFixed(2);
 		document.getElementById("value2").value = y2;
 	}
 	
 	if (ccc == "USD" && ddd == "USD") {		
-		var cur = 1;
+
 		var x = document.getElementById("value1").value;			
-		var y = x * cur;
+		var y = x * def;
 		var y2 = y.toFixed(2);
 		document.getElementById("value2").value = y2;
 	}
 	
 	if (ccc == "USD" && ddd == "JPY") {		
-		var cur = 119.499;
+		var cur = 119.499; //this
 		var x = document.getElementById("value1").value;			
 		var y = x * cur;
 		var y2 = y.toFixed(0);
@@ -82,7 +83,7 @@ function doCalc() {
 	}
 	
 	if (ccc == "USD" && ddd == "AUD") {		
-		var cur = 1.2709;
+		var cur = 1.2709; //this
 		var x = document.getElementById("value1").value;			
 		var y = x * cur;
 		var y2 = y.toFixed(2);
@@ -90,7 +91,7 @@ function doCalc() {
 	}
 	
 	if (ccc == "USD" && ddd == "GBP") {		
-		var cur = 0.6699;
+		var cur = 0.6699; //this
 		var x = document.getElementById("value1").value;			
 		var y = x * cur;
 		var y2 = y.toFixed(2);
@@ -101,15 +102,15 @@ function doCalc() {
 	//---------------------------------------------------
 	
 	if (ccc == "JPY" && ddd == "MYR") {		
-		var cur = 3.0673;
+
 		var x = document.getElementById("value1").value;			
-		var y = x * (cur / 100);
+		var y = x * (JPY / 100);
 		var y2 = y.toFixed(2);
 		document.getElementById("value2").value = y2;
 	}
 	
 	if (ccc == "JPY" && ddd == "USD") {		
-		var cur = 119.475;
+		var cur = 119.475; //this
 		var x = document.getElementById("value1").value;			
 		var y = x * (1 / cur);
 		var y2 = y.toFixed(2);
@@ -117,15 +118,15 @@ function doCalc() {
 	}
 	
 	if (ccc == "JPY" && ddd == "JPY") {		
-		var cur = 1;
+
 		var x = document.getElementById("value1").value;			
-		var y = x * (cur);
+		var y = x * def;
 		var y2 = y.toFixed(0);
 		document.getElementById("value2").value = y2;
 	}
 	
 	if (ccc == "JPY" && ddd == "AUD") {		
-		var cur = 0.0106;
+		var cur = 0.0106; //this
 		var x = document.getElementById("value1").value;			
 		var y = x * (cur);
 		var y2 = y.toFixed(2);
@@ -133,7 +134,7 @@ function doCalc() {
 	}
 	
 	if (ccc == "JPY" && ddd == "GBP") {		
-		var cur = 0.0056;
+		var cur = 0.0056; //this
 		var x = document.getElementById("value1").value;			
 		var y = x * (cur);
 		var y2 = y.toFixed(2);
@@ -144,15 +145,15 @@ function doCalc() {
 	//---------------------------------------------------
 	
 	if (ccc == "AUD" && ddd == "MYR") {		
-		var cur = 2.8825;
+
 		var x = document.getElementById("value1").value;			
-		var y = x * cur;
+		var y = x * AUD;
 		var y2 = y.toFixed(2);
 		document.getElementById("value2").value = y2;
 	}
 	
 	if (ccc == "AUD" && ddd == "USD") {		
-		var cur = 0.7872;
+		var cur = 0.7872; //this
 		var x = document.getElementById("value1").value;			
 		var y = x * cur;
 		var y2 = y.toFixed(2);
@@ -160,7 +161,7 @@ function doCalc() {
 	}
 	
 	if (ccc == "AUD" && ddd == "JPY") {		
-		var cur = 94.2563;
+		var cur = 94.2563; //this
 		var x = document.getElementById("value1").value;			
 		var y = x * cur;
 		var y2 = y.toFixed(0);
@@ -168,15 +169,15 @@ function doCalc() {
 	}
 	
 	if (ccc == "AUD" && ddd == "AUD") {		
-		var cur = 1;
+
 		var x = document.getElementById("value1").value;			
-		var y = x * cur;
+		var y = x * def;
 		var y2 = y.toFixed(2);
 		document.getElementById("value2").value = y2;
 	}
 	
 	if (ccc == "AUD" && ddd == "GBP") {		
-		var cur = 0.5297;
+		var cur = 0.5297; //this
 		var x = document.getElementById("value1").value;			
 		var y = x * cur;
 		var y2 = y.toFixed(2);
@@ -187,15 +188,15 @@ function doCalc() {
 	//-----------------------------------------------------
 	
 	if (ccc == "GBP" && ddd == "MYR") {		
-		var cur = 5.4418;
+
 		var x = document.getElementById("value1").value;			
-		var y = x * cur;
+		var y = x * GBP;
 		var y2 = y.toFixed(2);
 		document.getElementById("value2").value = y2;
 	}
 	
 	if (ccc == "GBP" && ddd == "USD") {		
-		var cur = 1.4869;
+		var cur = 1.4869; //this
 		var x = document.getElementById("value1").value;			
 		var y = x * cur;
 		var y2 = y.toFixed(2);
@@ -203,7 +204,7 @@ function doCalc() {
 	}
 	
 	if (ccc == "GBP" && ddd == "JPY") {		
-		var cur = 177.992;
+		var cur = 177.992; //this
 		var x = document.getElementById("value1").value;			
 		var y = x * cur;
 		var y2 = y.toFixed(0);
@@ -211,7 +212,7 @@ function doCalc() {
 	}
 	
 	if (ccc == "GBP" && ddd == "AUD") {		
-		var cur = 1.8873;
+		var cur = 1.8873; //this
 		var x = document.getElementById("value1").value;			
 		var y = x * cur;
 		var y2 = y.toFixed(2);
@@ -219,9 +220,9 @@ function doCalc() {
 	}
 	
 	if (ccc == "GBP" && ddd == "GBP") {		
-		var cur = 1;
+
 		var x = document.getElementById("value1").value;			
-		var y = x * cur;
+		var y = x * def;
 		var y2 = y.toFixed(2);
 		document.getElementById("value2").value = y2;
 	}
