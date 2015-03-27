@@ -1,12 +1,12 @@
 
-// Based on MYR 1.00
-// Last update on 18/3/15 1700
+// Based on MYR
+// Last update on 26/3/15 1700
 // Currently only testing out 5 main currencies
-//var USD = 3.707;
-//var JPY = 3.057;
-//var EUR = 3.933;
-//var AUD = 2.819;
-//var GBP = 5.471;
+//var USD = 3.6620;
+//var JPY = 3.0899;
+//var EUR = 4.0399;
+//var AUD = 2.8827;
+//var GBP = 5.4776;
 
 function doCalc() {
 	
@@ -459,4 +459,26 @@ function openExcelToRefreshData() {
 	Excel.Visible = false;
 	form1.my_textarea2.value = Excel.Workbooks.Open("C:/Program Files/Windows Sidebar/Gadgets/Currency_Gadget_Alpha.gadget/bnmrates.xlsx").ActiveSheet.Cells(1,1).Value;
 	Excel.Quit();
+}
+
+function openCalculate() {
+	
+	// To replace doCalc() and doCalcRev() for single function on converting currencies
+	
+	// while this function may be experimental, this will only update on
+	// another branch for testing.
+	// Hopefully this will work
+		
+}
+
+function clearInput() {
+	
+	// Clears all value input in the text box
+	document.getElementById("value1").value = '';
+	document.getElementById("value2").value = '';
+}
+
+function resetRates() {
+	
+	// To refresh rates with latest currency exchange value
 }
