@@ -3,15 +3,9 @@
 // Last update on 30/3/15 1200
 // Currently only testing out 5 main currencies
 var def = 1; //default value if undetermined or same currency
-//var USD = 3.6793;
-//var JPY = 0.0306;
-//var EUR = 4.0049;
-//var AUD = 2.8508;
-//var GBP = 5.4775;
-var test; //obviously for testing only
 
-//list of currency supported
-//variable all are '1' unless stated with ()
+// list of currency supported
+// variable all are '1' unless stated with ()
 var AUD;	 // Australian dollar
 var BND;	 // Brunei Dollar
 var CND;	 // Canadian Dollar
@@ -66,7 +60,7 @@ function doCalc() {
 	if (ccc == "MYR" && ddd == "JPY") {
 		
 		var x = document.getElementById("value1").value;			
-		var y = x * (1 / JPY);
+		var y = x * (100 / JPY);
 		var y2 = y.toFixed(0);
 		document.getElementById("value2").value = y2;
 	}
@@ -480,19 +474,6 @@ function doCalcRev() {
 	}	
 }
 
-
-// basically to refresh currency data with latest one
-// by pulling from excel which contain query to get update
-// from BNM web page
-
-function openExcelToRefreshData() {
-	var Excel;
-	Excel = new ActiveXObject("Excel.Application");	
-	Excel.Visible = false;
-	form1.my_textarea2.value = Excel.Workbooks.Open("C:/Program Files/Windows Sidebar/Gadgets/Currency_Gadget_Alpha.gadget/bnmrates.xlsx").ActiveSheet.Cells(1,1).Value;
-	Excel.Quit();
-}
-
 function openCalculate() {
 	
 	// To replace doCalc() and doCalcRev() for single function on converting currencies
@@ -513,22 +494,39 @@ function clearInput() {
 function resetRates() {
 	
 	// To refresh rates with latest currency exchange value
-	function openExcelToRefreshData() {
-		
-		//form1.my_textarea2.value = Excel.Workbooks.Open("C:/Program Files/Windows Sidebar/Gadgets/Currency_Gadget_Alpha.gadget/bnmrates.xlsx").ActiveSheet.Cells(1,1).Value;
-		//form1.my_textarea2.value = Excel.Workbooks.Open("/192.168.10.2/Share/Mis & Company/bnmrates.xlsx").ActiveSheet.Cells(1,1).Value;
-		//return Excel.Workbooks.Open("/192.168.10.2/Share/Mis & Company/bnmrates.xlsx").ActiveSheet.Cells(l,i).Value;
-		
-		var excel = new ActiveXObject("Excel.Application");
-		excel.Visible = false; //change to false if this works, true to debug
-		var excel_file = excel.Workbooks.Open("//ANTELOPE/Share/Mis & Company/bnmrates.xls");// alert(excel_file.worksheets.count);
-		var excel_sheet = excel_file.Worksheets("Sheet1");
+				
+	var excel = new ActiveXObject("Excel.Application");
+	excel.Visible = false; //false to hide while true to debug
+	var excel_file = excel.Workbooks.Open("//ANTELOPE/Share/Mis & Company/bnmrates.xls");
+	var excel_sheet = excel_file.Worksheets("Sheet1");
 
-		for(i=0;i<5;i++)
-		{
-		   var data = excel_sheet.Cells(i,2).Value;
-			drawWithexcelValue(data);
-		}
-		excel.Quit();
-	}
+	AUD = excel_sheet.Cells(3,7).Value;
+	BND = excel_sheet.Cells(4,7).Value;
+	CAD = excel_sheet.Cells(5,7).Value;
+	KHR = excel_sheet.Cells(6,7).Value;
+	CNY = excel_sheet.Cells(7,7).Value;
+	EUR = excel_sheet.Cells(8,7).Value;
+	HKD = excel_sheet.Cells(9,7).Value;
+	IDR = excel_sheet.Cells(10,7).Value;
+	JPY = excel_sheet.Cells(11,7).Value;
+	KRW = excel_sheet.Cells(12,7).Value;
+	PHP = excel_sheet.Cells(13,7).Value;
+	SAR = excel_sheet.Cells(14,7).Value;
+	SGD = excel_sheet.Cells(15,7).Value;
+	CHF = excel_sheet.Cells(16,7).Value;
+	TWD = excel_sheet.Cells(17,7).Value;
+	THB = excel_sheet.Cells(18,7).Value;
+	GBP = excel_sheet.Cells(19,7).Value;
+	USD = excel_sheet.Cells(20,7).Value;
+	VND = excel_sheet.Cells(21,7).Value;
+	SDR = excel_sheet.Cells(22,7).Value;
+	NZD = excel_sheet.Cells(23,7).Value;
+	MMK = excel_sheet.Cells(24,7).Value;
+	INR = excel_sheet.Cells(25,7).Value;
+	AED = excel_sheet.Cells(26,7).Value;
+	PKR = excel_sheet.Cells(27,7).Value;
+	NPR = excel_sheet.Cells(28,7).Value;
+	EGP = excel_sheet.Cells(29,7).Value;
+	
+	excel.Quit();
 }
