@@ -14,7 +14,7 @@
 	</icons>
 	<hosts>
 		<host name="sidebar">
-			<base type="HTML" apiVersion="0.0.0.2" src="test.htm" />
+			<base type="HTML" apiVersion="0.0.1.0" src="main.htm" />
 			<permissions>Full</permissions>
 			<platform minPlatformVersion="1.0"/>
 		</host>
