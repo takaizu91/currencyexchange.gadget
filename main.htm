@@ -1,0 +1,75 @@
+<!--<html xmlns="http://www.w3.org/1999/xhtml"> -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Utf-8" />
+        <title>Currency Converter 1.0</title>
+        <style type="text/css">
+        body
+        {
+            margin: 0;
+            width: 130px;
+            height: 110px;
+            font-family: 'Segoe UI', Tahoma;
+            <!-- font-weight: bold; -->
+            font-size: 11px;
+        }
+        #gadgetContent
+        {
+            margin-top: 5px;
+            width: 130px;
+            vertical-align: middle;
+            text-align: center;
+			color: #ffff
+            overflow: hidden;
+        }
+		
+        </style>
+		<script>
+			// Enable settingsUI
+			System.Gadget.settingsUI="setting.html";
+		</script>
+		
+		<script src="scripts/exchange.js"></script>
+        <script src="scripts/init.js"></script>
+		
+		
+		<!-- getting javascript from external source to run -->
+		<!--<script src="scripts/exchange.js" ></script> -->
+		
+    </head>
+	
+    <body onload="init()" text-align="middle">
+        <g:background id="imgBackground">
+            <span id="gadgetContent" onload="resetRates()">Currency Converter 1.0</span>
+			
+			<span><br />
+				<select class="wayver" id="sel1" onchange="doCalc()" onchange="doCalcRev()">
+					<option value="MYR">MYR</option>
+					<!-- <option value="USD">USD</option> -->
+					<!-- <option value="JPY">JPY</option> -->
+					<!-- <option value="AUD">AUD</option> -->
+					<!-- <option value="GBP">GBP</option> -->
+				</select>
+			<input type="number" class="wayver" id="value1" value="1" maxlength="10" size="5" onkeyup="doCalc()">
+			</span>
+			<span><br />
+				<select class="wayving" id="sel2" onchange="doCalc()" onchange="doCalcRev()">
+					<option value="USD">USD</option>
+					<option value="MYR">MYR</option>
+					<option value="JPY">JPY</option>
+					<option value="AUD">AUD</option>
+					<option value="GBP">GBP</option>
+				</select>					
+			<input type="number" class="wayving" id="value2" value="" maxlength="10" size="5" onkeyup="doCalcRev()">
+			</span>
+			
+			<span>
+			<!-- Button to refresh and clear input -->
+				<button type="button" id="refresh" align="middle" onclick="resetRates()">Refresh</button>
+				<button type="button" id="clear" align="middle" onclick="clearInput()">Clear</button>
+			</span>
+			
+        </g:background>
+		
+    </body>
+</html>
