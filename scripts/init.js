@@ -4,6 +4,9 @@ function init()
 	var oBackground = document.getElementById("imgBackground");
 	oBackground.src = "url(images/penguin130x130-2.png)";
 	
+	// call global variable in
+	globVar();
+	
 	var excel = new ActiveXObject("Excel.Application");
 	excel.Visible = false; //false to hide while true to debug
 	var excel_file = excel.Workbooks.Open("//ANTELOPE/Share/Mis & Company/bnmrates.xls");
