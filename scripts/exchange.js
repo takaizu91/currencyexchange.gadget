@@ -1,12 +1,15 @@
 
 // Based on MYR
 // Last update on 30/3/15 1200
-// Currently only testing out 5 main currencies
+// Currently only testing out MYR as main currencies to 27 available currencies
 var def = 1; //default value if undetermined or same currency
 
+// list of currency supported
+
 function globVar() {
-	// list of currency supported
-	// variable all are '1' unless stated with ()
+	//var curr1 = [];
+	//var curr100 = [];
+
 	var AUD;	 // Australian dollar
 	var BND;	 // Brunei Dollar
 	var CND;	 // Canadian Dollar
@@ -33,7 +36,7 @@ function globVar() {
 	var AED;	 // United Arab Emirates Dirham UAE (100)
 	var PKR;	 // Pakistan Rupee (100)
 	var NPR;	 // Nepalese Rupee (100)
-	var EGP;	 // Egyptian Pound 
+	var EGP;	 // Egyptian Pound
 }
 
 function doCalc() {
@@ -52,10 +55,66 @@ function doCalc() {
 		document.getElementById("value2").value = y2;
 	}
 	
-	if (ccc == "MYR" && ddd == "USD") {
+	if (ccc == "MYR" && ddd == "AUD") {
 		
 		var x = document.getElementById("value1").value;			
-		var y = x * USD;
+		var y = x * (1 / AUD);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "BND") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (1 / BND);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "CAD") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (1 / CAD);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "KHR") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (100 / KHR);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "CNY") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (1 / CNY);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "EUR") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (1 / EUR);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "HKD") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (100 / HKD);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "IDR") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (100 / IDR);
 		var y2 = y.toFixed(2);
 		document.getElementById("value2").value = y2;
 	}
@@ -68,10 +127,58 @@ function doCalc() {
 		document.getElementById("value2").value = y2;
 	}
 	
-	if (ccc == "MYR" && ddd == "AUD") {
+	if (ccc == "MYR" && ddd == "KRW") {
 		
 		var x = document.getElementById("value1").value;			
-		var y = x * (AUD);
+		var y = x * (100 / KRW);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "PHP") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (100 / PHP);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "SAR") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (100 / SAR);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "SGD") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (1 / SGD);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "CHF") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (1 / CHF);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "TWD") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (100 / TWD);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "THB") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (100 / THB);
 		var y2 = y.toFixed(2);
 		document.getElementById("value2").value = y2;
 	}
@@ -79,7 +186,87 @@ function doCalc() {
 	if (ccc == "MYR" && ddd == "GBP") {
 		
 		var x = document.getElementById("value1").value;			
-		var y = x * (GBP);
+		var y = x * (1 / GBP);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "USD") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (1 / USD);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "VND") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (100 / VND);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "SDR") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (1 / SDR);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "NZD") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (1 / NZD);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "MMK") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (100 / MMK);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "INR") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (100 / INR);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "AED") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (100 / AED);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "PKR") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (100 / PKR);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "NPR") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (100 / NPR);
+		var y2 = y.toFixed(2);
+		document.getElementById("value2").value = y2;
+	}
+	
+	if (ccc == "MYR" && ddd == "EGP") {
+		
+		var x = document.getElementById("value1").value;			
+		var y = x * (1 / EGP);
 		var y2 = y.toFixed(2);
 		document.getElementById("value2").value = y2;
 	}
@@ -438,9 +625,9 @@ function doCalcRev() {
 	//---------------------------------------------------
 	
 	if (eee == "GBP" && fff == "MYR") {		
-		var cur = 0.1827;
+		//var cur = GBP;
 		var x2 = document.getElementById("value2").value;			
-		var y2 = x2 * cur;
+		var y2 = x2 * GBP;
 		var y3 = y2.toFixed(2);
 		document.getElementById("value1").value = y3;
 	}	
@@ -478,17 +665,49 @@ function doCalcRev() {
 	}	
 }
 
+/*
 function openCalculate() {
 	
-	// To replace doCalc() and doCalcRev() for single function on converting currencies
+	var ccc = document.getElementById("sel1").value;
+	var ddd = document.getElementById("sel2").value;
 	
-	// while this function may be experimental, this will only update on
-	// another branch for testing.
-	// Hopefully this will work
+	var curry1 = ["AUD", "BND", "CAD", "CNY", "EUR", "SGD", "CHF", "GBP", "USD", "SDR", "NZD", "EGP"];
+	var curry100 = ["KHR", "HKD", "IDR", "JPY", "KRW", "PHP", "SAR", "TWD", "THB", "VND", "MMK", "INR", "AED", "PKR", "NPR"];
+
 	
-	// Currently still having problem with simplifying the code for easier currency updates
+	//something to differentiate value '1' and '100'
+	
+	if (ccc == "MYR") {
+
+		for (var i=0; i<12; i++) {
+			
+			ee = curry1[i];
+					
+			if (ddd == ee) {
+				var x = document.getElementById("value1").value;			
+				var y = x * (1 / ee);
+				var y2 = y.toFixed(2);
+				document.getElementById("value2").value = y2;
+				
+			}
+		}
+			
+		for (var j=0; j<15; j++) {
+		
+			ff = curry100[j];
+			
+			if (ddd == ff) {
+				var x = document.getElementById("value1").value;			
+				var y = x * (1 / ff);
+				var y2 = y.toFixed(2);
+				document.getElementById("value2").value = y2;
+			}
+		}
+		
+	}
 		
 }
+*/
 
 function clearInput() {
 	
@@ -506,7 +725,7 @@ function resetRates() {
 	excel.Visible = false; //false to hide while true to debug
 	var excel_file = excel.Workbooks.Open("//ANTELOPE/Share/Mis & Company/bnmrates.xls");
 	var excel_sheet = excel_file.Worksheets("Sheet1");
-
+	
 	AUD = excel_sheet.Cells(3,7).Value;
 	BND = excel_sheet.Cells(4,7).Value;
 	CAD = excel_sheet.Cells(5,7).Value;
