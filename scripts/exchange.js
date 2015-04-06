@@ -4,38 +4,41 @@
 // Currently only testing out 5 main currencies
 var def = 1; //default value if undetermined or same currency
 
-// list of currency supported
-// variable all are '1' unless stated with ()
-var AUD;	 // Australian dollar
-var BND;	 // Brunei Dollar
-var CND;	 // Canadian Dollar
-var KHR;	 // Cambodian Riel (100)
-var CNY;	 // Chinese Renminbi
-var EUR;	 // EURO
-var HKD;	 // Hong Kong Dollar (100)
-var IDR;	 // Indonesia Rupiah (100)
-var JPY;	 // Japanese Yen (100)
-var KRW;	 // Korean Won (100)
-var PHP;	 // Phillippine Peso (100)
-var SAR;	 // Saudi Arabiyan Riyal (100)
-var SGD;	 // Singapore Dollar
-var CHF;	 // Swiss Franc
-var TWD;	 // Taiwanese New Dollar (100)
-var THB;	 // Thai Baht (100) 
-var GBP;	 // U.K Pound
-var USD;	 // U.S Dollar
-var VND;	 // Vietnamese Dong (100)
-var SDR;	 // IMF Special Drawing Right
-var NZD;	 // New Zealand Dollar
-var MMK;	 // Myanmar Kyat (100)
-var INR;	 // Indian Rupee (100)
-var AED;	 // United Arab Emirates Dirham UAE (100)
-var PKR;	 // Pakistan Rupee (100)
-var NPR;	 // Nepalese Rupee (100)
-var EGP;	 // Egyptian Pound 
+function globVar() {
+	// list of currency supported
+	// variable all are '1' unless stated with ()
+	var AUD;	 // Australian dollar
+	var BND;	 // Brunei Dollar
+	var CND;	 // Canadian Dollar
+	var KHR;	 // Cambodian Riel (100)
+	var CNY;	 // Chinese Renminbi
+	var EUR;	 // EURO
+	var HKD;	 // Hong Kong Dollar (100)
+	var IDR;	 // Indonesia Rupiah (100)
+	var JPY;	 // Japanese Yen (100)
+	var KRW;	 // Korean Won (100)
+	var PHP;	 // Phillippine Peso (100)
+	var SAR;	 // Saudi Arabiyan Riyal (100)
+	var SGD;	 // Singapore Dollar
+	var CHF;	 // Swiss Franc
+	var TWD;	 // Taiwanese New Dollar (100)
+	var THB;	 // Thai Baht (100) 
+	var GBP;	 // U.K Pound
+	var USD;	 // U.S Dollar
+	var VND;	 // Vietnamese Dong (100)
+	var SDR;	 // IMF Special Drawing Right
+	var NZD;	 // New Zealand Dollar
+	var MMK;	 // Myanmar Kyat (100)
+	var INR;	 // Indian Rupee (100)
+	var AED;	 // United Arab Emirates Dirham UAE (100)
+	var PKR;	 // Pakistan Rupee (100)
+	var NPR;	 // Nepalese Rupee (100)
+	var EGP;	 // Egyptian Pound 
+}
 
 function doCalc() {
 	
+	globVar();
 	var ccc = document.getElementById("sel1").value;
 	var ddd = document.getElementById("sel2").value;
 	
@@ -255,6 +258,7 @@ function doCalc() {
 
 function doCalcRev() {
 
+	globVar();
 	var eee = document.getElementById("sel1").value;
 	var fff = document.getElementById("sel2").value;
 	
@@ -481,6 +485,8 @@ function openCalculate() {
 	// while this function may be experimental, this will only update on
 	// another branch for testing.
 	// Hopefully this will work
+	
+	// Currently still having problem with simplifying the code for easier currency updates
 		
 }
 
@@ -493,6 +499,7 @@ function clearInput() {
 
 function resetRates() {
 	
+	globVar();
 	// To refresh rates with latest currency exchange value
 				
 	var excel = new ActiveXObject("Excel.Application");
