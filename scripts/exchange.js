@@ -146,7 +146,7 @@ function resetRates() {
 	// To refresh rates with latest currency exchange value				
 	var excel = new ActiveXObject("Excel.Application");
 	excel.Visible = false; //false to hide while true to debug
-	var excel_file = excel.Workbooks.Open("//ANTELOPE/Share/Mis & Company/bnmrates.xls");
+	var excel_file = excel.Workbooks.Open("file/bnmrates.xls");
 	var excel_sheet = excel_file.Worksheets("Sheet1");
 	
 	// MYR to value
