@@ -24,10 +24,6 @@
         }
 		
         </style>
-		<script>
-			// Enable settingsUI
-			System.Gadget.settingsUI="setting.html";
-		</script>
 		
 		<script src="scripts/exchange.js"></script>
         <script src="scripts/init.js"></script>
@@ -41,33 +37,55 @@
     <body onload="init()" text-align="middle">
         <g:background id="imgBackground">
             <span id="gadgetContent" onload="resetRates()">Currency Converter 1.0</span>
-			
 			<span><br />
-				<select class="wayver" id="sel1" onchange="doCalc()" onchange="doCalcRev()">
+				<select class="wayver" id="sel1" onchange="doCalc()">
 					<option value="MYR">MYR</option>
 					<!-- <option value="USD">USD</option> -->
 					<!-- <option value="JPY">JPY</option> -->
 					<!-- <option value="AUD">AUD</option> -->
 					<!-- <option value="GBP">GBP</option> -->
 				</select>
-			<input type="number" class="wayver" id="value1" value="1" maxlength="10" size="5" onkeyup="doCalc()">
+				<input type="number" class="wayver" id="value1" value="1" maxlength="10" size="5" onkeyup="doCalc()">
 			</span>
 			<span><br />
-				<select class="wayving" id="sel2" onchange="doCalc()" onchange="doCalcRev()">
-					<option value="USD">USD</option>
-					<option value="MYR">MYR</option>
-					<option value="JPY">JPY</option>
+				<select class="wayving" id="sel2" onchange="doCalc()">
 					<option value="AUD">AUD</option>
+					<option value="BND">BND</option>
+					<option value="CAD">CAD</option>
+					<option value="KHR">KHR</option>
+					<option value="CNY">CNY</option>
+					<option value="EUR">EUR</option>
+					<option value="HKD">HKD</option>
+					<option value="IDR">IDR</option>
+					<option value="JPY">JPY</option>
+					<option value="KRW">KRW</option>
+					<option value="PHP">PHP</option>
+					<option value="SAR">SAR</option>
+					<option value="SGD">SGD</option>
+					<option value="CHF">CHF</option>
+					<option value="TWD">TWD</option>
+					<option value="THB">THB</option>
 					<option value="GBP">GBP</option>
-				</select>					
-			<input type="number" class="wayving" id="value2" value="" maxlength="10" size="5" onkeyup="doCalcRev()">
+					<option value="USD" selected>USD</option>
+					<option value="VND">VND</option>
+					<option value="SDR">SDR</option>
+					<option value="NZD">NZD</option>
+					<option value="MMK">MMK</option>
+					<option value="INR">INR</option>
+					<option value="AED">AED</option>
+					<option value="PKR">PKR</option>
+					<option value="NPR">NPR</option>
+					<option value="EGP">EGP</option>
+				</select>
+				<input type="number" class="wayving" id="value2" value="" maxlength="10" size="5" onkeyup="doCalcRev()">
 			</span>
 			
 			<span>
-			<!-- Button to refresh and clear input -->
+				<!-- Button to refresh and clear input -->
 				<button type="button" id="refresh" align="middle" onclick="resetRates()">Refresh</button>
 				<button type="button" id="clear" align="middle" onclick="clearInput()">Clear</button>
 			</span>
+
 			
         </g:background>
 		

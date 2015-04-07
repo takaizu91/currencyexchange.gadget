@@ -1,14 +1,14 @@
 
 <?xml version="1.0" encoding="utf-8"?>
 <gadget>
-	<name>Currency_Gadget_Alpha</name>
+	<name>Currency Exchange Alpha</name>
 	<version>1.0.0.0</version>
 	<author name="takaizu">
 		<info url="http://shinkucast.web.fc2.com" />
 		<logo src="icon.png" />
 	</author>
 	<copyright>&#169; 2015</copyright>
-	<description>Current exchange rates from BNM</description>
+	<description>Current exchange rates from BNM (Support 27 currencies)</description>
 	<icons>
 		<icon src="icon.png" />
 	</icons>
